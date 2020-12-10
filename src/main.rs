@@ -6,5 +6,12 @@ fn fib(i: u64) -> u64 {
 }
 
 fn main() {
-    println!("{}", fib(20));
+    for i in 1..=20 {
+        println!("Fibonacci {:3}: {}", i, fib(i));
+    }
+}
+
+#[test]
+fn fib_20() {
+    assert_eq!(fib(20), 6765);
 }
